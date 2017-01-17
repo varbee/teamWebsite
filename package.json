@@ -1,7 +1,7 @@
 {
-  "name": "webpack_scaffold",
+  "name": "teamWebsite",
   "version": "1.0.0",
-  "description": "a scaffold with webpack",
+  "description": "teamWebsite with webpack and jQuery",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build": "webpack --display-error-details",
     "watch": "webpack --progress --colors --watch"
   },
-  "author": "Ruth",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.16.0",
@@ -28,13 +28,5 @@
   },
   "dependencies": {
     "jquery": "^3.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RukiQ/webpack_scaffold.git"
-  },
-  "bugs": {
-    "url": "https://github.com/RukiQ/webpack_scaffold/issues"
-  },
-  "homepage": "https://github.com/RukiQ/webpack_scaffold#readme"
+  }
 }
