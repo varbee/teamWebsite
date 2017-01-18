@@ -1,0 +1,7 @@
+.cy_banner div{
+	background:#ddd;
+	height:40px;
+	&:hover{
+		background:red;
+	}
+}
