@@ -139,3 +139,5 @@ var Boxlayout = (function() {
 	return { init : init };
 
 })();
+
+export default Boxlayout
