@@ -21,6 +21,7 @@ module.exports = {
         inline: true,
         progress: true
     },
+    devtool: '#eval-source-map',
     module: {
         loaders: [
             {
@@ -53,12 +54,11 @@ module.exports = {
         ]
     },
     plugins: [
-        //不能引入插件
-        // new webpack.ProvidePlugin({
-        //     $: 'jquery',
-        //     jQuery: 'jquery',
-        //     "window.jQuery":"jquery"
-        // }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            "window.jQuery":"jquery"
+        }),
         new ExtractTextPlugin('[name].css')
     ],
-}
+};
