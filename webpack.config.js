@@ -44,7 +44,7 @@ module.exports = {
             },
             { 
                 test: /\.(png|jpg|gif)$/, 
-                loader: 'url-loader?limit=8192' 
+                loader: 'url-loader?limit=8192'
             },
             {
                 test: /\.tpl$/,
@@ -53,10 +53,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery'
-        }),
+        //不能引入插件
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        //     "window.jQuery":"jquery"
+        // }),
         new ExtractTextPlugin('[name].css')
-    ]
+    ],
 }
