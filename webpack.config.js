@@ -21,6 +21,7 @@ module.exports = {
         inline: true,
         progress: true
     },
+    devtool: '#eval-source-map',
     module: {
         loaders: [
             {
@@ -44,7 +45,7 @@ module.exports = {
             },
             { 
                 test: /\.(png|jpg|gif)$/, 
-                loader: 'url-loader?limit=8192' 
+                loader: 'url-loader?limit=8192'
             },
             {
                 test: /\.tpl$/,
@@ -55,8 +56,9 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
+            "window.jQuery":"jquery"
         }),
         new ExtractTextPlugin('[name].css')
-    ]
-}
+    ],
+};
