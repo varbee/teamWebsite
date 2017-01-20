@@ -49,7 +49,7 @@ var Boxlayout = (function() {
 	}
 
 	function initEvents() {
-		
+		var currentWorkPanel;
 		$sections.each( function() {
 			
 			var $section = $( this );
@@ -92,6 +92,7 @@ var Boxlayout = (function() {
 			$workPanelsContainer.addClass( 'bl-panel-items-show' );
 
 			var $panel = $workPanelsContainer.find("[data-panel='" + $( this ).data( 'panel' ) + "']");
+			
 			currentWorkPanel = $panel.index();
 			$panel.addClass( 'bl-show-work' );
 
@@ -146,7 +147,7 @@ var Boxlayout = (function() {
 
 })();
 
-export default Boxlayout
+
 
 $(function () {
     Boxlayout.init();

@@ -1,28 +1,16 @@
-/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}*/
+/*
+*四格内容部分
+*/
 
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
-
-/**,
-*:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}*/
+$color1: #90c5a9;
+$color2: #665186;
+$color3: #7a9a95;
+$color4: #fa8b60;
+$boxheight: 48%;
 
 .container {
-	height: 100%; 
+	height: 100%;
     color: #f2ede3;
     font-size: 0.9em;
     font-weight: 300;
@@ -36,14 +24,10 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 	padding: 0 5px;
 	text-transform: uppercase;
 	font-size: 80%;
+	&:hover {
+		color: #fff;
+	}
 }
-
-.container a:hover {
-	color: #fff;
-}
-
-.container { height: 100%; }
-
 .bl-main {
 	position: absolute;
 	width: 100%;
@@ -54,31 +38,31 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 .bl-main > section {
 	position: absolute;
 	width: 50%;
-	height: 50%;
+	height: $boxheight;
 }
 
 .bl-main > section:first-child {
 	top: 0;
 	left: 0;
-	background: #90c5a9;
+	background: $color1;
 }
 
 .bl-main > section:nth-child(2) {
 	top: 0;
 	left: 50%;
-	background: #665186;
+	background: $color2;
 }
 
 .bl-main > section:nth-child(3) {
-	top: 50%;
+	top: $boxheight;
 	left: 0;
-	background: #7a9a95;
+	background: $color3;
 }
 
 .bl-main > section:nth-child(4) {
-	top: 50%;
+	top: $boxheight;
 	left: 50%;
-	background: #fa8b60;
+	background: $color4;
 }
 
 .bl-box {
@@ -137,27 +121,11 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 .bl-icon:before {
 	display: block;
 	font-size: 0;
+	margin: 3px 4px 10px 0;
 	margin-bottom: 10px;
 	margin-right: 4px;
 }
-
-/*四格块的logo*/
-/*.bl-icon-about:before {
-	content: "\e000";
-}
-
-.bl-icon-works:before {
-	content: "\e001";
-}
-
-.bl-icon-blog:before {
-	content: "\e002";
-}
-
-.bl-icon-contact:before {
-	content: "\e003";
-}*/
-
+/*模块里的关闭按钮*/
 .bl-main > section .bl-icon-close {
 	position: absolute;
 	top: 20px;
@@ -196,7 +164,12 @@ div.bl-panel-items > div > div {
 #bl-work-items a,img {
 	width: 234px;
 	height: 250px;
+	cursor: pointer;
 }
+.bl-show-work li {
+	float: left;
+}
+
 /* Custom content */
 
 .bl-content p {
@@ -353,7 +326,7 @@ div.bl-panel-items {
 }
 
 div.bl-panel-items > div {
-	background: #00caac;
+	background: $color3;
 	z-index: 0;
 	opacity: 0;
 	-webkit-transform: translateY(0);
@@ -368,10 +341,10 @@ div.bl-panel-items > div {
 div.bl-panel-items nav {
 	position: absolute;
 	z-index: 9999;
-	width: 216px;
+	width: 224px;
 	left: 50%;
-	top: 0px;
-	margin-left: -108px;
+	top: 0b;
+	margin-left: -112px;
 	opacity: 0;
 	-webkit-transition: opacity 0.2s ease-in-out 0.5s;
 	-moz-transition: opacity 0.2s ease-in-out 0.5s;
@@ -443,16 +416,16 @@ div.bl-panel-items > div.bl-hide-current-work {
 }
 
 .bl-main > section:first-child.bl-expand {
-	background: #90c5a9;
+	background: $color1;
 }
 .bl-main > section:nth-child(2).bl-expand {
-	background: #665186;
+	background: $color2;
 }
 .bl-main > section:nth-child(3).bl-expand {
-	background: #7a9a95;
+	background: $color3;
 }
 .bl-main > section:nth-child(4).bl-expand {
-	background: #fa8b60;
+	background: $color4;
 }
 
 .bl-main.bl-expand-item > section:not(.bl-expand),

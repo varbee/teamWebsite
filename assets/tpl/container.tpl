@@ -1,4 +1,4 @@
-<div class="container">	
+
 			<div id="bl-main" class="bl-main">
 				<section>
 					<div class="bl-box">
@@ -88,10 +88,10 @@
 						<h2>Members</h2>
 						<p>未来，我们大步向前</p>
 						<ul id="bl-work-items">
-							<li data-panel="panel-1"><a href="#"><img src="../assets/images/person1.png" /></a></li>
-							<li data-panel="panel-2"><a href="#"><img src="../assets/images/person2.png" /></a></li>
-							<li data-panel="panel-3"><a href="#"><img src="../assets/images/person3.png" /></a></li>
-							<li data-panel="panel-4"><a href="#"><img src="../assets/images/person4.png" /></a></li>
+							<li data-panel="panel-1"><img src="../assets/images/person1.png" /></li>
+							<li data-panel="panel-2"><img src="../assets/images/person2.png" /></li>
+							<li data-panel="panel-3"><img src="../assets/images/person3.png" /></li>
+							<li data-panel="panel-4"><img src="../assets/images/person4.png" /></li>
 						</ul>
 						<p><a href="http://www.campussay.com/">在互联网的风口上，开启创业的风帆</a></p>
 					</div>
@@ -151,4 +151,4 @@
 					</nav>
 				</div>
 			</div>
-		</div>
+	
