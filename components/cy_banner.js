@@ -5,3 +5,5 @@ import tpl from "../assets/tpl/cy_banner.tpl";
 
 
 $('.cy_banner').append(tpl());
+
+

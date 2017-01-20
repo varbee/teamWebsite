@@ -6,3 +6,5 @@ import tpl from "../assets/tpl/content.tpl";
 
 
 $('.content').append(tpl());
+
+

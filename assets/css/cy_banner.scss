@@ -1,7 +1,83 @@
-.cy_banner div{
-	background:#ddd;
-	height:40px;
-	&:hover{
-		background:red;
+$Width:1360px;
+$Height:2000px;
+.banner{
+	width:$Width;
+	height:$Height;
+	background-color: #eee;
+	margin-bottom: 10px;
+	overflow:hidden;
+	position:relative;
+	.pre{
+	   position:absolute;
+	   z-index:900;
+	   top:260px;
+	   left:200px;
+	   width:50px;
+	   height:50px;
+	   font-size:40px;
+	   cursor: pointer;
+	   color:#fff;
+	   
+		
+    }
+   	.next{
+	   position:absolute;
+	   z-index:900;
+	   top:260px;
+	   right:200px;
+	    width:50px;
+	   height:50px;
+	   color:#fff;
+	   font-size:40px;
+	   cursor: pointer
+
+	 
+   }
+  	.slider{
+	position: absolute;
+	top:0;
+	width:$Width;
+	height:580px;
+	overflow:hidden;
+	
+	li>img{
+		width:$Width;
+		height:580px;
+	}
+	.banner1,.banner2,.banner3{
+		position:relative;
+	}
+
+	 .banner1 .video{
+		position:absolute;
+		z-index:900;
+	   top:90px;
+	   right:330px;
+	   background-color: #fff;
+	}
+	.banner2 .now{
+		position:absolute;
+		z-index:900;
+		top:300px;
+		left:600px;
+		font-size:40px;
+		color:#fff;
+
+	}
+	.banner3 .future,.banner3 .future{
+		position:absolute;
+		z-index:900;
+		top:200px;
+		left:300px;
+		font-size:40px;
+		color:#fff;
+	}
+	.banner3 .future1{
+		top:240px;
+		left:350px;
+		margin-top: 40px;
+			}
+
 	}
 }
+
