@@ -4,16 +4,7 @@ import tpl from "../assets/tpl/container.tpl";
 
 $('.container').append(tpl);
 
-/**
- * boxlayout.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
- */
+/*四格模块*/
 var Boxlayout = (function() {
 
 	var $el = $( '#bl-main' ),
@@ -151,4 +142,33 @@ var Boxlayout = (function() {
 
 $(function () {
     Boxlayout.init();
+    var show = function up() {
+    	var speed = 1;
+    	var oDiv = $('#detail');
+    	var timer = null;
+    	oDiv.html(oDiv.html()+oDiv.html());
+    	
+    	function move() {
+    		var x = oDiv.position().top
+    		if (x <= -oDiv.height()/2) {
+    			oDiv.css("top",-4);
+    		}
+    		else {
+    			x = x - speed;
+    			oDiv.css("top",x);
+    		}
+    		console.log(oDiv.position().top);
+    	}
+    	timer = setInterval(move,30);
+    	oDiv.mouseover(function() {
+    		clearInterval(timer);
+    	});
+    	oDiv.mouseout(function() {
+    		timer = setInterval(move,30);
+    	})
+    }();
+    
+
 });
+
+
