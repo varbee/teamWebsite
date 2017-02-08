@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+/****************************************/
+/*  功能：base                          */
+/****************************************/
+html {
+   position: relative; 
+   min-height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote,
+th,
+td,
+p,
+i {
+   font-style: normal;
+   margin: 0;
+   padding: 0;
+   outline: 0;
+}
+
+body {
+   font-family: "Microsoft YaHei";
+   font-size: 14px;
+   min-height: 100%;
+   margin: 0;
+   padding: 0;
+   padding-bottom: 180px;
+   color: #5c5c5c;
+}
+
+table {
+   border-spacing: 0; 
+   border-collapse: collapse;
+}
+
+fieldset,
+img {
+   border: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+   font-weight: normal; 
+   font-style: normal;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+
+caption,
+th {
+   text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: 100%;
+   font-weight: normal;
+}
+
+q:before,
+q:after {
+   content: "";
+}
+
+abbr,
+acronym {
+   font-variant: normal; 
+   border: none;
+}
+
+sup {
+   vertical-align: text-top;
+}
+
+sub {
+   vertical-align: text-bottom;
+}
+
+input,
+button,
+textarea,
+select {
+   font-family: inherit;
+   font-size: inherit;
+   font-weight: inherit;
+}
+
+textarea {
+   resize: none;
+}
+
+input,
+button,
+textarea,
+select {
+   *font-size: 100%;
+}
+
+button {
+   cursor: pointer;
+   border: none; 
+   outline: none;
+}
+
+legend {
+   color: #000000;
+}
+
+del,
+ins {
+   text-decoration: none;
+}
+
+small {
+   font-size: 100%;
+}
+
+a {
+   text-decoration: none;
+   color: #5c5c5c;
+   outline: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+a:focus {
+        outline: none;
+   -moz-outline: none;
+}
+
+*input.radio,
+input.checkbox {
+   *margin: -2px 2px -2px -2px;
+}
+
+*input[type=radio],
+input[type=checkbox],
+x:-moz-any-link,
+x:default {
+   vertical-align: -3px;
+}
+
+/*html5*/
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+menu {
+   display: block;
+}
+
+audio,
+canvas,
+video {
+   display: inline-block;
+   *display: inline;
+   *zoom: 1;
+}
+
+
+a {
+   cursor: pointer;
+}
