@@ -12,8 +12,9 @@ var timer=null;
 var len=$(".slider li").length*2;
 $(".slider").append($(".slider").html()).css({'width':len*w,'left':-len*w/2});
 function init(){
-	$(".banner .next").trigger('click');
+	$(".banner .next").trigger('click');//触发右键单击功能
 }
+//鼠标移入移出事件
 timer=setInterval(init,2000);
 $(".slider li").hover(function(){
 	clearInterval(timer);
@@ -21,45 +22,27 @@ $(".slider li").hover(function(){
 },function(){
 	timer=setInterval(init,2000);
 });
-
+//左右箭头
 	  $(".prev").click(function(){
-
 		  l=parseInt($(".slider").css("left"))+w; 
-
 			 showCurrent(l); 
-
 		  });
 
 		  $(".next").click(function(){
-
 		     l=parseInt($(".slider").css("left"))-w;  
-
 			showCurrent(l);
-
 	  });
-
-	   function showCurrent(l){    
-
+	   function showCurrent(l){ 
 	   if($(".slider").is(':animated')){ 
-
 	      return;
-
-	   }
-
-		  $(".slider").animate({"left":l},500,function(){
-
-				if(l==0){ 
-
-			   $(".slider").css("left",-len*w/2);   
-
-			   
-
+	   }else{
+	   $(".slider").animate({"left":l},500,function(){
+          if(l==0){ 
+		 $(".slider").css("left",-len*w/2);   
 			 }else if(l==(1-len)*w){ 
+			 $(".slider").css("left",(1-len/2)*w); 
+			}
 
-				 $(".slider").css('left',(1-len/2)*w); 
-
-				}
-
-		    }); 	  
-
+		    }); 
+	   }
 		 }
