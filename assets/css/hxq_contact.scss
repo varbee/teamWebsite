@@ -5,6 +5,7 @@
  */
 
  /*字体设置*/
+
 @mixin Font {
 	font: {
 		size: 16px;
@@ -26,44 +27,101 @@
 			radius: 5px;
 			width: 1px;
 			style: solid;
+			color: #ff5a09;
 		}
-		color:#EF9760;
+		color: #ccc;
 		box-shadow: inset 0px 0px 15px #ff9900;
 	}	
 }
-
 body {
-	background-color: #393939;
-
+	// background: #393939;
 }
 .hxq_contact {
 	width: 100%;
 	height: 100%;
+	position: relative;
+	top: 54rem;
 	overflow: auto;
 	zoom: 1;
-	position: relative;
-    top: 1300px;
-	// background-color: #393939;
-	// background-image: url(../assets/image/contact_bg.jpg) no-repeat;
+	background: url(../images/banner3.jpg) no-repeat;
+	background-size: cover; 
+	z-index: 1;
+}
+.hxq_contact::before {
+	content: '';
+	background: url(../images/banner3.jpg) no-repeat;
+	position: absolute;  
+    top: 1.666667rem;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    z-index: -1;  
+    -webkit-filter: blur(5px);  
+    filter: blur(5px);   
+    background-size: cover;   /*平铺*/ 
+    background-attachment: fixed;  
+    /*位置固定*/  
+}
+.contact {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	zoom: 1;
+	// background: url(../images/banner3.jpg) no-repeat;
 }
 
 /*加入我们标题*/
 h1 {
-	margin: 4.5rem 11.25rem;
-	padding-bottom: 1.0rem;
-	font: {
-		size: 36px;
-	}
+	margin-top: 5.5rem;
+	margin-left: 11.25rem;
+	padding-bottom: 4.5rem;
+	font-size: 36px;
 	color:#fff;
 }
+
+@media screen and (min-width:66.75rem) {
+	.contact {
+		padding:0 auto;
+		> div {
+			float: left;
+			margin-top: 4.166667rem;	
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+}
+@media screen and (max-width:66.666667rem) {
+  	.contact{
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		// padding: 0 auto;
+		> div {
+			margin-top: 4.166667rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.join_left {
+			width: 65%;
+			// min-width: 41.666667rem;
+		}
+		.join_right {
+			width: 65%;
+			// min-width: 41.666667rem;
+		}
+	}
+}
+// .contact > div {
+// 	float: left;
+// }
 /*地图部分*/ 
 .join_left {
-	float: left;
-	width: 49%;	
+	width: 50%;	
 	// border: 1px solid #fff;
-	min-width: 41.666667rem;
-	// overflow: hidden;
-	// zoom: 1;
+	overflow: hidden;
+	zoom: 1;
 	// &:after {
 	// 	content: " ";
 	// 	clear: both;
@@ -76,14 +134,17 @@ h1 {
 
 #map {
 	width: 60%;
-	height: 25.0rem;
+	height: 30.0rem;
 	border: 1px solid #FFF;
 	margin-left: 20%;
+	.amap-copyright {
+		display: none;
+	}
 }
 .amap-marker-label {
 	width: 15.0rem;
-	height: 20px;
-	line-height: 20px;
+	height: 1.666667rem;
+	line-height: 1.666667rem;
 	padding-left: 1.25rem;
 	border: {
 		radius: 5px;
@@ -94,33 +155,33 @@ h1 {
 	background: #6e6e6e;
 	
 }
+
 .address {
 	margin: {
-		left: 15%;
-		top: 4.166667rem
+		left: 12%;
+		top: 2.5rem
 	}
 	@include Font;
 	span {
 		display: block;
-		&:before {
-			content: " . ";
-		}
+		padding-top: 0.4rem;
+		// width: 43.333333rem;
 	}
 }
 /* 联系表单部分 */ 
 
 .join_right {
 	width: 50%;	
+	// height: 36.333333rem;
 	display: inline-block;
 	z-index: 120;
 	// border: 1px solid #fff;
-	min-width: 41.666667rem;
 	form {
-		margin-left: 20%;
-		width: 33.0rem;
+		margin: 0 auto;
+		width: 30.0rem;
 		height: 35.0rem;
 		div {
-			margin-bottom: 20px;
+			margin-bottom: 1.666667rem;
 			label {
 				@include Font;
 			}
@@ -158,3 +219,69 @@ h1 {
 	}
 
 }
+
+div.hxq_footer {
+	width: 100%;
+	overflow: auto;
+	zoom: 1;
+	margin-top: 3.333333rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	span {
+		margin:0 auto;
+		display: block;
+		font-size: 14px;
+		font-weight: lighter;
+		color: #fff;
+		&:first-child:before {
+			content: "--------------------------------------";
+		}
+		&:first-child:after {
+			content: "--------------------------------------";
+		}
+		&:nth-child(n+2) {
+			width: 25.0rem;
+		}
+		&:nth-child(2) {
+			display: inline-block;
+		}
+		img {
+			width: 8.333333rem;
+			height: 8.333333rem;
+			display: none;
+			border-radius: 0;
+			position: absolute;
+			top: 54.5rem;
+   	 		left: 63rem;
+		}
+		a {
+			font-size: 14px;
+			font-weight: lighter;
+			color: #fff;
+		}
+	}
+
+}
+.hxq_footer > a {
+		transition: all 0.4s ease-in-out;
+		display: inline-block;
+		margin: 2rem 1rem;
+    	padding-right: 1rem;
+		&:hover {
+			transform: rotate(360deg);
+			transform: scale(1.2,1.2);
+			// transform-origin: 100% 50%
+		}
+		 img {
+			width: 3.333333rem;
+			height: 3.333333rem;
+			background: #909292;
+			border-radius: 2.333333rem;
+			&:hover {
+				background:#cfcfcf;
+				filter:alpha(opacity=50);
+				// border-radius: 2.333333rem;
+			}
+		}
+	}

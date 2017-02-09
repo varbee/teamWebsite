@@ -1,11 +1,8 @@
-$Width:1360px;
-$Height:2000px;
+$Width:100%;
+$Height: 600px;
 .banner{
 	width:$Width;
-	height:600px;
-	background-color: #eee;
-	margin-bottom: 10px;
-	overflow:hidden;
+	height:$Height;
 	position:relative;
 	.prev{
 	   position:absolute;
@@ -37,14 +34,16 @@ $Height:2000px;
 	position: absolute;
 	top:0;
 	width:$Width;
-	height:580px;
+	height:$Height;
 	overflow:hidden;
 	
-	li>img{
+	li img{
 		width:$Width;
-		height:700px;
+	    height:$Height;
 	}
 	li{
+		width:$Width;
+	    height:$Height;
 		position:relative;
 		display:inline-block;
 	}
@@ -81,9 +80,5 @@ $Height:2000px;
 
 	}
 }
-@media screen and (max-width: 46.5em) {
-	.banner {
-		display: none;
-	}
-}
+
 

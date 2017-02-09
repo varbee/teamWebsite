@@ -7,10 +7,10 @@ $color1: #90c5a9;
 $color2: #665186;
 $color3: #7a9a95;
 $color4: #fa8b60;
-$boxheight: 48%;
+$boxheight: 50%;
 
 .container {
-	height: 100%;
+	height: 50%;
     color: #f2ede3;
     font-size: 0.9em;
     font-weight: 300;
@@ -31,7 +31,7 @@ $boxheight: 48%;
 .bl-main {
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 46%;
 	overflow: hidden;
 }
 
@@ -139,6 +139,7 @@ $boxheight: 48%;
 	height: 24px;
 	border-radius: 50%;
 }
+
 /*核心成员里面的关闭按钮*/
 .bl-icon-close:before {
 	content: "\e005";
@@ -161,14 +162,16 @@ div.bl-panel-items > div > div {
 	overflow: hidden;
 	overflow-y: auto;
 }
-#bl-work-items a,img {
+.bl-content img {
 	width: 234px;
 	height: 250px;
 	cursor: pointer;
 }
-.bl-show-work li {
-	float: left;
+.bl-show-work h4 {
+	font-size:1.3em;
+	margin: 8px 0 8px 0;
 }
+
 
 /* Custom content */
 
@@ -184,23 +187,6 @@ div.bl-panel-items > div > div {
 	font-weight: 300;
 	margin: 0 0 20px 0;
 }
-
-/*.bl-content article {
-	padding: 20px 40px 20px 0px;
-}
-
-.bl-content article h3 {
-	font-weight: 700;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	margin: 0 0 10px 0;
-	padding-top: 20px;
-	font-size: 1.4em;
-}
-
-.bl-content article a {
-	color: rgba(0,0,0,0.2);
-}*/
 
 .bl-content > ul {
 	list-style: none;
@@ -225,7 +211,7 @@ div.bl-panel-items > div > div {
 	max-width: 100%;
 }
 
-/*部门介绍模块部分*/
+/*部门介绍模块*/
 .branch li {
 	position: relative;
 }
@@ -236,6 +222,10 @@ div.bl-panel-items > div > div {
 	width: 218px;
 	position: relative;
 	border: 10px solid rgba(0,0,0,0.1);
+}
+.branch h3 {
+	font-size: 1.17em;
+    padding-bottom: 10px;
 }
 .branch li:hover div {
 	display: block;
@@ -269,20 +259,38 @@ div.bl-panel-items > div > div {
 	width: 506px;
 	margin-right: 46px;
 }
-.branch-cp img {
-	width: 504px;
+.branch-cp {
+	img {
+		width: 504px;
+	}
+	div {
+		padding: 186px 20px 10px 26px; 
+		width: 478px;
+		height: 106px;
+	}
 }
-.branch-cp div {
-	padding: 186px 20px 10px 26px; 
-	width: 478px;
-	height: 106px;
-	position: absolute;
-	top: -20px;
-	left: 0;
-	background-color: #f2ede3;
-	color: #34495e;
-	line-height: 20px;
+
+@media screen and (max-width: 46.5em) {
+	.branch {
+		img {
+			width: 218px;
+			height: 176px; 
+		}
+		div {
+			display: none;
+			padding: 10px 20px 20px 250px; 
+			width: 148px;
+			height: 165px;
+			position: absolute;
+			top: -20px;
+			left: 0;
+			background-color: #f2ede3;
+			color: #34495e;
+			line-height: 20px;
+		}
+	}
 }
+
 
 /* Panel Items */
 
@@ -305,13 +313,13 @@ div.bl-panel-items > div > div {
 }
 
 div.bl-panel-items > div > div h3 {
-	font-size: 2.4em;
+	font-size: 2.3em;
 	font-weight: 300;
-	margin: 0 0 20px 0;
+	margin: 0 0 8px 0;
 }
 
 div.bl-panel-items > div > div p {
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 div.bl-panel-items > div > div img {
@@ -493,3 +501,134 @@ section.bl-expand .bl-icon-close {
 		width: 40%;
 	}
 }
+
+/*产品模块*/
+.produce {
+	margin-top: -8px;
+	margin-bottom: -10px;
+	text-align: center;
+}
+.produce:after {
+    content: " ";
+    ckear: both;
+}
+.goods-1 {
+	margin: 0px 35px;
+	padding: 30px 10px 8px;
+	-webkit-transition:  ease-out 0.6s;
+	-moz-transition: ease-out 0.6s;
+	-o-transition: ease-out 0.6s;
+	transition: ease-out 0.6s;
+	h4 {
+		border-bottom: 1px solid transparent;
+	    padding: 10px 0px;
+	    font-size: 20px;
+	} 
+	p {
+		padding: 10px;
+		font-size: 16px;
+	}
+	div {
+		/*background: url('../img/icon-bg.png') repeat-x center center;*/
+		background-color: #34495e;
+		display: inline-block;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    -webkit-transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
+        -o-transition-duration: 0.8s;
+        transition-duration: 0.8s;
+        border-radius: 50%;
+	}
+	img {
+		padding-top: 24px;
+		width: 100px;
+		height: 100px;
+	}
+	&:hover {
+		background: #34495e;
+	    color: #fff;
+		-webkit-transition: all 0.6s linear;
+        -moz-transition: all 0.6s linear;
+        -o-transition: all 0.6s linear;
+        -ms-transition: all 0.6s linear;
+        transition: all 0.6s linear;
+        div {
+        	background: #e67e22;/*图标背景颜色*/
+        	color: #fff;
+        	text-shadow: 1px -1px 0px rgba(0,0,0,0.5);
+	    	-webkit-transform: rotate(360deg);
+        	-moz-transform: rotate(360deg);
+        	-o-transform: rotate(360deg);
+        	border-radius: 50%;
+	    	-webkit-border-radius: 50%;
+	    	-moz-border-radius: 50%;
+        }
+        h4 {
+        	border-bottom: 1px solid #fff;
+        }
+	}
+}
+
+
+/*荣誉部分*/
+#honour
+{
+	color: #fff;
+	height: 500px;
+}
+
+#honour
+{
+	position: relative;
+	width: 738px;
+	height: 200px;
+	overflow: hidden;
+	margin: 0 auto;
+	top: 40px;
+	border: 4px solid #ccc;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10px #fff;
+  	-moz-box-shadow: 0 0 10px #fff;
+	box-shadow: 0 0 10px #fff;
+}
+
+#detail
+{
+	position: absolute;
+	top: 10px;
+	width: 738px;
+	margin: 0 auto;
+	text-align: center;
+}
+#detail span
+{
+	display: block;
+	font-size: 18px;
+	margin: 20px;
+}
+
+#detail h3
+{
+	font-size: 24px;
+	color: $color2;
+	font-weight: bold;
+	margin:10px auto 0;
+}
+
+@media (min-width: 1200px) {
+	.goods {
+		width: 33.33%;
+		float: left;
+	}
+}
+@media (min-width: 992px) {
+	.goods-min {
+		width: 33.33%;
+		float: left;
+	}
+}
+
