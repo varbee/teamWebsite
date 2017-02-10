@@ -5,26 +5,35 @@ import tpl from "../assets/tpl/cy_banner.tpl";
 
 
 $('.cy_banner').append(tpl());
+var aLi=$(".slider li");
+var i=0;
+var size=$(".slider li").length;
+var t=setInterval(moveRight,5000);
 
-var oSlider=$(".slider");
-var prev=$(".prev");
-var next=$(".next");
-var oWidth=parseInt($(window).width());
-var interval=3000;
-var timer=null;
+function moveLeft(){
+	i--;
+	if(i==-1){
+		i=size-1;
+	}
+	aLi.eq(i).show().siblings().hide();
 
-function autoplay(){
-	timer=setTimeout(function(){
-		next.trigger('click');
-		autoplay();
-	},interval);
 }
-function stop(){
-	clearInterval(timer);
+function moveRight(){
+	i++;
+	if(i==size){
+		i=0;
+	}
+	aLi.eq(i).show().siblings().hide();
+
+
 }
-oSlider.on('mouseover',function(){
-	stop();
+$(".banner").hover(function(){
+	clearInterval(t);
+},function(){t=setInterval(moveRight,5000)});
+
+$(".prev").click(function(){
+	moveLeft();
 });
-oSlider.on('mouseout',function(){
-	autoplay();
+$(".next").click(function(){
+	moveRight();
 });
