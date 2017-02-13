@@ -149,7 +149,7 @@ $(function () {
     	oDiv.html(oDiv.html()+oDiv.html());
     	
     	function move() {
-    		var x = oDiv.position().top
+    		var x = oDiv.position().top;
     		if (x <= -oDiv.height()/2) {
     			oDiv.css("top",-4);
     		}
@@ -157,7 +157,6 @@ $(function () {
     			x = x - speed;
     			oDiv.css("top",x);
     		}
-    		console.log(oDiv.position().top);
     	}
     	timer = setInterval(move,30);
     	oDiv.mouseover(function() {
@@ -167,6 +166,7 @@ $(function () {
     		timer = setInterval(move,30);
     	})
     }();
+    
     
 
 });
