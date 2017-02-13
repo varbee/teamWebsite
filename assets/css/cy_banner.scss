@@ -1,12 +1,10 @@
-$Width:1360px;
-$Height:2000px;
+$Width:100%;
+$Height: 600px;
 .banner{
 	width:$Width;
-	height:600px;
-	background-color: #eee;
-	margin-bottom: 10px;
-	overflow:hidden;
+	height:$Height;
 	position:relative;
+	cursor:pointer;
 	.prev{
 	   position:absolute;
 	   z-index:900;
@@ -37,16 +35,20 @@ $Height:2000px;
 	position: absolute;
 	top:0;
 	width:$Width;
-	height:580px;
+	height:$Height;
 	overflow:hidden;
 	
-	li>img{
+	li img{
 		width:$Width;
-		height:700px;
+	    height:$Height;
 	}
 	li{
+		width:$Width;
+	    height:$Height;
 		position:relative;
 		display:inline-block;
+		overflow:hidden;
+		list-style:none;
 	}
 
 	 .banner1 .video{
@@ -60,7 +62,7 @@ $Height:2000px;
 		position:absolute;
 		z-index:900;
 		top:300px;
-		left:600px;
+		left:400px;
 		font-size:40px;
 		color:#fff;
 
@@ -81,9 +83,7 @@ $Height:2000px;
 
 	}
 }
-@media screen and (max-width: 46.5em) {
-	.banner {
-		display: none;
-	}
+.imgOn{
+	display:inline;
 }
 

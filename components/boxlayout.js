@@ -1,10 +1,13 @@
-import "../assets/css/container.scss";
-import tpl from "../assets/tpl/container.tpl";
-
-
-$('.container').append(tpl);
-
-/*四格模块*/
+/**
+ * boxlayout.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
 var Boxlayout = (function() {
 
 	var $el = $( '#bl-main' ),
@@ -40,7 +43,7 @@ var Boxlayout = (function() {
 	}
 
 	function initEvents() {
-		var currentWorkPanel;
+		
 		$sections.each( function() {
 			
 			var $section = $( this );
@@ -83,7 +86,6 @@ var Boxlayout = (function() {
 			$workPanelsContainer.addClass( 'bl-panel-items-show' );
 
 			var $panel = $workPanelsContainer.find("[data-panel='" + $( this ).data( 'panel' ) + "']");
-			
 			currentWorkPanel = $panel.index();
 			$panel.addClass( 'bl-show-work' );
 
@@ -138,43 +140,4 @@ var Boxlayout = (function() {
 
 })();
 
-
-
-$(function () {
-    Boxlayout.init();
-    var show = function up() {
-    	var speed = 1;
-    	var oDiv = $('#detail');
-    	var timer = null;
-    	oDiv.html(oDiv.html()+oDiv.html());
-    	
-    	function move() {
-    		var x = oDiv.position().top;
-    		if (x <= -oDiv.height()/2) {
-    			oDiv.css("top",-4);
-    		}
-    		else {
-    			x = x - speed;
-    			oDiv.css("top",x);
-    		}
-    	}
-    	timer = setInterval(move,30);
-    	oDiv.mouseover(function() {
-    		clearInterval(timer);
-    	});
-    	oDiv.mouseout(function() {
-    		timer = setInterval(move,30);
-    	})
-    }();
-    
-    var click = function scroll() {
-    	$('#introduce').click(function() {
-    		var oCon =
-    		document.getElementById("container").scrollIntoView();
-    	
-    	})
-    }();
-
-});
-
-
+export default Boxlayout
