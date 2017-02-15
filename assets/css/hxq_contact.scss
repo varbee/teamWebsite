@@ -47,14 +47,13 @@ body {
 	background-size: cover; 
 	z-index: 1;
 }
-.hxq_contact::before {
-	content: '';
-	background: url(../images/banner3.jpg) no-repeat;
-	position: absolute;  
-    top: 1.666667rem;  
+.hxq_contact:before{
+	content:"";
+    height:100%;
+	background:  url(../images/banner3.jpg);
+	position: absolute;   
     left: 0;  
     right: 0;  
-    bottom: 0;  
     z-index: -1;  
     -webkit-filter: blur(5px);  
     filter: blur(5px);   

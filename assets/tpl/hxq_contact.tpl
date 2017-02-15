@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact" name="tips4" id="tips4">
 	<!-- 加入我们板块 -->
 	<h1>加入我们</h1>
 	<!-- 地图API、详细地址、联系方式 -->

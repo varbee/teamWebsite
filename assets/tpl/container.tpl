@@ -1,5 +1,5 @@
 <div id="bl-main" class="bl-main">
-	<section>
+	<section  id="tips0" name="tips0">
 		<div class="bl-box">
 			<h2 class="bl-icon bl-icon-about">简介</h2>
 		</div>
@@ -17,7 +17,7 @@
 		</div>
 			<span class="bl-icon bl-icon-close"></span>
 	</section>
-	<section>
+	<section id="tips1" name="tips1">
 		<div class="bl-box">
 			<h2 class="bl-icon bl-icon-blog">部门</h2>
 		</div>

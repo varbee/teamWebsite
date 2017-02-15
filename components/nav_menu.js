@@ -4,16 +4,16 @@ import tpl from "../assets/tpl/nav.tpl";
 
 $('.nav').append(tpl());
 
-// jQuery 实现
-let oList = $('#list');
+$(function(){
+var timer=null;
+var oBanner=$(".nav").next().children(":first").children(":first");
+// console.log(ocy_banner.height());
+$(".introduction").click(function(){
+	scroll(oBanner);
+});
+function scroll(obj){
+	// console.log(obj.position().top);
+}
 
-oList.on('click', 'a', (e) => {
-    let $target = $(e.target),
-        oLi = oList.children();
 
-    $.each(oLi, (index, item) => {
-        $(item).find('a').css('color', '#08c');
-    });
-
-    $target.css('color', 'blue');
 });

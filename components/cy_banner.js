@@ -9,6 +9,7 @@ var aLi=$(".slider li");
 var i=0;
 var size=$(".slider li").length;
 var t=setInterval(moveRight,5000);
+var oButton=$(".buttons span");
 
 function moveLeft(){
 	i--;
@@ -17,6 +18,8 @@ function moveLeft(){
 	}
 	aLi.eq(i).show().siblings().hide();
 
+	oButton.eq(i).addClass("on css-rotate").siblings().removeClass("on css-rotate");
+
 }
 function moveRight(){
 	i++;
@@ -24,9 +27,23 @@ function moveRight(){
 		i=0;
 	}
 	aLi.eq(i).show().siblings().hide();
-
+	oButton.eq(i).addClass("on css-rotate").siblings().removeClass("on css-rotate");
 
 }
+//切换小圆点函数
+var switchDots=function(){
+    	oButton.click(function(){
+    		if($(this).hasClass("on")){
+    			$(this).removeClass("on");
+    		}else{
+    			$(this).addClass("on");
+    		}
+    		
+    	});
+    	$(this).siblings().removeClass("on");
+   
+}();
+
 $(".banner").hover(function(){
 	clearInterval(t);
 },function(){t=setInterval(moveRight,5000)});

@@ -1,3 +1,23 @@
+body{
+width:100%;
+height:100%;
+background-attachment: fixed;
+
+}
+body:before{
+	content:".";
+    height:100%;
+	background:  url(../images/banner3.jpg);
+	position: absolute;   
+    left: 0;  
+    right: 0;  
+    z-index: -1;  
+    -webkit-filter: blur(5px);  
+    filter: blur(5px);   
+    background-size: cover;   /*平铺*/ 
+    background-attachment: fixed;  
+    /*位置固定*/  
+}
 .main{
 	position:absolute;
 	top:60px;
@@ -12,14 +32,18 @@
 
 	span{
 		display:block;
-		width:20px;
-		height:20px;
+		width:8px;
+		height:8px;
 		text-align:center;
 		margin-bottom: 4px;
-		border:1px solid #000;
+		border:1px solid #fff;
 		border-radius:50%;
-		color:#fff;
+		background:#fff;
 		cursor:pointer;
 
 	}
+	
 }
+
+
+
