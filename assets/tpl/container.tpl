@@ -1,7 +1,7 @@
 <div id="bl-main" class="bl-main">
 	<section>
 		<div class="bl-box">
-			<h2 class="bl-icon bl-icon-about">简介</h2>
+			<h2 class="bl-icon bl-icon-about" id="bl-icon">简介</h2>
 		</div>
 		<div class="bl-content">
 			<h2>Introduction</h2>
@@ -218,6 +218,9 @@
 			<span class="bl-next-work">&gt; Next Person</span>
 			<span class="bl-icon bl-icon-close"></span>
 		</nav>
+	</div>
+	<div class="black" id="black">
+		<h2></h2>
 	</div>
 </div>
 	

@@ -147,7 +147,6 @@ $(function () {
     	var oDiv = $('#detail');
     	var timer = null;
     	oDiv.html(oDiv.html()+oDiv.html());
-    	
     	function move() {
     		var x = oDiv.position().top;
     		if (x <= -oDiv.height()/2) {
@@ -166,14 +165,31 @@ $(function () {
     		timer = setInterval(move,30);
     	})
     }();
+
+    $('#black').click(function () {
+    		$('#black').hide();
+    		console.log("df");
+    });
     
-    var click = function scroll() {
-    	$('#introduce').click(function() {
-    		var oCon =
-    		document.getElementById("container").scrollIntoView();
-    	
-    	})
-    }();
+    $("#bl-icon").each(function(index, element){
+		var animation = TweenMax.to(this, 0.2, {
+	    	className: '+= superShadow',
+	    	marginTop: '-10px',
+	    	marginBottom: '10px',
+	    	ease: Power1.easeIn,
+	    	paused:true
+	  	});
+	  	element.animation = animation;
+	})
+
+
+	$('#bl-icon').hover(function(){
+	 	this.animation.play()
+		}, 
+		function(){
+	 		this.animation.reverse();
+	})
+
 
 });
 
