@@ -9,6 +9,6 @@
     <li><a href="#">成员</a></li>
     <li><a href="#">产品</a></li>
     <li><a href="#tips4">加入我们</a></li>
-    <li><a href="#">blog</a></li>
-</ul>
+    <li><a href="container.scrollIntoView()">blog</a></li>
+   </ul>
 </div>
