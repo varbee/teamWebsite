@@ -1,5 +1,6 @@
 var path = require('path'),
     webpack = require('webpack'),
+    px2rem=require('postcss-px2rem'),
     ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -26,8 +27,9 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                // loader: 'style!css'
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                // loader: "style-loader!css-loader!postcss-loader"
+                loader: ExtractTextPlugin.extract('style', 'css!postcss')
+                 // loader: 'style!css!px2rem?remUnit=75&remPrecision=8'
             },
             {
                 test: /\.scss$/, 
@@ -52,6 +54,9 @@ module.exports = {
                 loader: 'mustache'
             }
         ]
+    },
+    postcss: function() {
+    return [px2rem({remUnit: 75})];
     },
     plugins: [
         new webpack.ProvidePlugin({

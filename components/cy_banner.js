@@ -10,12 +10,14 @@ var i=0;
 var size=$(".slider li").length;
 var t=setInterval(moveRight,5000);
 var oButton=$(".buttons span");
+var oNav=$(".main").prev();
 
 function moveLeft(){
 	i--;
 	if(i==-1){
 		i=size-1;
 	}
+	// aLi.eq(i).animate({left:'10px'}).fadeOut("fast");
 	aLi.eq(i).show().siblings().hide();
 
 	oButton.eq(i).addClass("on css-rotate").siblings().removeClass("on css-rotate");
@@ -54,3 +56,10 @@ $(".prev").click(function(){
 $(".next").click(function(){
 	moveRight();
 });
+
+//点击隐藏导航栏事件
+var showNav=function(){
+	$(".show-nav").click(function(){
+		oNav.hide();
+	});
+}();
