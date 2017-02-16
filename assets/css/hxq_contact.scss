@@ -30,17 +30,18 @@
 			color: #ff5a09;
 		}
 		color: #ccc;
-		box-shadow: inset 0px 0px 15px #ff9900;
+		box-shadow:  0px 0px 10px #ff9900;
 	}	
 }
 body {
 	// background: #393939;
+
 }
 .hxq_contact {
-	width: 100%;
+	width: 1348px;
 	height: 100%;
 	position: relative;
-	top: 48rem;
+	top: 806px;
 	overflow: auto;
 	zoom: 1;
 	background: url(../images/banner3.jpg) no-repeat;
@@ -51,7 +52,7 @@ body {
 	content: '';
 	background: url(../images/banner3.jpg) no-repeat;
 	position: absolute;  
-    top: 1.666667rem;  
+    top: 20px;  
     left: 0;  
     right: 0;  
     bottom: 0;  
@@ -59,172 +60,386 @@ body {
     -webkit-filter: blur(5px);  
     filter: blur(5px);   
     background-size: cover;   /*平铺*/ 
-    background-attachment: fixed;  
-    /*位置固定*/  
+    background-attachment: fixed;   /*位置固定*/  
+   
 }
+
+/* 表单切换 */
+#hxq_join_dot {
+	padding-top: 10%;
+	padding-left: 8%;
+	width: 80px;
+	height: 140px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	z-index: 20;
+	div {
+		margin-top: 50px;
+	}
+	.hxq_dot {
+		display: inline-block;
+		vertical-align: middle;
+		width: 6px;
+		height: 6px;
+		border: 1px solid #000;
+		-webkit-transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-o-transform: rotate(45deg);
+		transform: rotate(45deg);
+		cursor: pointer;
+		&[checked="true"] {
+			background: #fff;
+		}
+	}
+	span {
+		font-size: 12px;
+		font-weight: normal;
+		font-family: '微软雅黑';
+		color: #000;
+		margin: 10px;
+		padding-top: 10px;
+	}
+}
+
+/*******************
+*联系我们
+************************/
+
+/* 表单内容 */
 .contact {
+	margin: 120px 0;
+	padding-left: 10%;
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 500px;
 	overflow: auto;
 	zoom: 1;
 	// background: url(../images/banner3.jpg) no-repeat;
+
+	/*地图部分*/ 
+	.contact_left {
+		width: 45%;	
+		// border: 1px solid #fff;
+		overflow: hidden;
+		zoom: 1;
+		// &:after {
+		// 	content: " ";
+		// 	clear: both;
+		// 	display:block;
+		// 	width: 0;
+		// 	height: 0;
+		// 	visibility:hidden;
+		// }
+	}
+
+	#map {
+		width: 60%;
+		height: 360px;
+		border: 1px solid #FFF;
+		margin-left: 20%;
+		.amap-copyright {
+			display: none;
+		}
+	}
+	.amap-marker-label {
+		width: 180px;
+		height: 20px;
+		line-height: 20px;
+		padding-left: 15px;
+		border: {
+			radius: 5px;
+			width: 1px;
+			style: none;
+		}
+		color: #fff;
+		background: #6e6e6e;
+		
+	}
+
+	.address {
+		margin: {
+			left: 12%;
+			top: 30px;
+		}
+		@include Font;
+		span {
+			display: block;
+			padding-top: 6px;
+			// width: 520px;
+		}
+	}
+
+
+	/* 联系我们表单部分 */ 
+	.contact_right {
+		width: 45%;	
+		height: 440px;
+		display: inline-block;
+		z-index: 120;
+		// border: 1px solid #fff;
+		form {
+			margin: 0 auto;
+			width: 360px;
+			height: 420px;
+			div {
+				margin-bottom: 20px;
+				label {
+					@include Font;
+				}
+				input {
+					width: 295px;
+					height: 30px;
+					padding-left: 10px;
+					@include gainFocus;
+					@include Font;
+					font-weight: normal;
+				}
+				textarea {
+					width: 307px;
+					height:　400px;
+					min-height: 200px;
+					resize: none;
+					box-sizing: border-box;
+					padding: 10px;
+					@include gainFocus;
+					@include Font;
+					font-weight: normal;
+					vertical-align: top;
+				}
+				input[type="submit"] {
+					width: 100px;
+					height: 40px; 
+					padding: 0;
+					margin-left: 260px;
+					background: #EF9760; 
+					@include Font;
+					&:hover {
+						background: #ff5a09;
+					}
+				}
+			}
+		}
+
+	}
 }
 
-/*加入我们标题*/
-h1 {
-	margin-top: 5.5rem;
-	margin-left: 11.25rem;
-	padding-bottom: 4.5rem;
-	font-size: 36px;
-	color:#fff;
-}
-
-@media screen and (min-width:66.75rem) {
+/* 窗口自适应 */
+@media screen and (min-width:768px) {
 	.contact {
 		padding:0 auto;
 		> div {
 			float: left;
-			margin-top: 4.166667rem;	
+			margin-top: 50px;	
 			margin-left: auto;
 			margin-right: auto;
+		}
+		div.hxq_footer span > img{
+			position: absolute;
+			top: 81.8%;
+   	 		left: 57%;
 		}
 	}
 
 }
-@media screen and (max-width:66.666667rem) {
+@media screen and (max-width:768px) {
+	.hxq_contact {
+		position: relative;
+		top: 654px;
+	}
   	.contact{
+  		float: left;
 		display: flex;
 		flex-direction: column;
-		// justify-content: center;
-		// padding: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		> div {
-			margin-top: 4.166667rem;
+			margin-top: 50px;
 			margin-left: auto;
 			margin-right: auto;
 		}
-		.join_left {
+		.contact_left {
 			width: 65%;
-			// min-width: 41.666667rem;
+			// min-width: 500px;
 		}
-		.join_right {
+		.contact_right {
 			width: 65%;
-			// min-width: 41.666667rem;
+			// min-width: 500px;
+		}
+		div.hxq_footer span > img{
+			position: absolute;
+			top: 88.2%;
+   	 		left: 61.5%;
 		}
 	}
 }
-// .contact > div {
-// 	float: left;
-// }
-/*地图部分*/ 
-.join_left {
-	width: 50%;	
-	// border: 1px solid #fff;
-	overflow: hidden;
+
+
+/*******************
+*加入我们
+************************/
+#join {
+	width: 1348px;
+	height: 500px;
+}
+#joinform {
+	margin-top: 100px;
+	width: 90%;
+	display: block;
+ 	// min-width: 700px;
+ 	height: 396px;
+ 	float: left;
+ 	margin-left: 10%;
+ 	overflow: hidden;
 	zoom: 1;
-	// &:after {
-	// 	content: " ";
-	// 	clear: both;
-	// 	display:block;
-	// 	width: 0;
-	// 	height: 0;
-	// 	visibility:hidden;
-	// }
-}
-
-#map {
-	width: 60%;
-	height: 30.0rem;
-	border: 1px solid #FFF;
-	margin-left: 20%;
-	.amap-copyright {
-		display: none;
+	.label_box {
+	 	width: 10%;
+	 	min-width: 100px;
+	 	height: 370px;
+	 	margin-right: 34px;
+	 	float: left;
+	 	label {
+		 	width: 110%;
+			display: block;
+			height: 42px;
+			line-height: 42px;
+			text-align: right;
+			margin-bottom: 24px;
+			@include Font;
+		}
 	}
-}
-.amap-marker-label {
-	width: 15.0rem;
-	height: 1.666667rem;
-	line-height: 1.666667rem;
-	padding-left: 1.25rem;
-	border: {
-		radius: 5px;
-		width: 1px;
-		style: none;
-	}
-	color: #fff;
-	background: #6e6e6e;
-	
-}
-
-.address {
-	margin: {
-		left: 12%;
-		top: 2.5rem
-	}
-	@include Font;
-	span {
-		display: block;
-		padding-top: 0.4rem;
-		// width: 43.333333rem;
-	}
-}
-/* 联系表单部分 */ 
-
-.join_right {
-	width: 50%;	
-	// height: 36.333333rem;
-	display: inline-block;
-	z-index: 120;
-	// border: 1px solid #fff;
-	form {
-		margin: 0 auto;
-		width: 30.0rem;
-		height: 35.0rem;
-		div {
-			margin-bottom: 1.666667rem;
-			label {
-				@include Font;
+	@at-root .input_box {
+		width: 35%;
+		height: 396px;
+		float: left;
+		@include Font;
+		.row {
+			height: 42px;
+			line-height: 42px;
+			margin-bottom: 24px;
+			.sex{
+				margin-left: 20px;
+				span {
+					@include Font;
+					padding-left: 20px;
+				} 
 			}
-			input {
-				width: 295px;
-				height: 30px;
-				padding-left: 10px;
-				@include gainFocus;
-				@include Font;
-				font-weight: normal;
-			}
-			textarea {
-				width: 360px;
-				height:　400px;
-				min-height: 200px;
-				resize: none;
-				box-sizing: border-box;
-				padding: 10px;
-				@include gainFocus;
-				@include Font;
-				font-weight: normal;
-			}
-			input[type="submit"] {
-				width: 100px;
-				height: 40px; 
-				padding: 0;
-				margin-left: 260px;
-				background: #EF9760; 
-				@include Font;
-				&:hover {
-					background: #ff5a09;
+			.sex > input{
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				line-height: 42px;
+			    -webkit-appearance: none;
+				background-color: #fafafa;
+				border: 1px solid #cacece;
+				border-radius: 50%;
+				outline: none;
+				position: relative;
+				&:checked {
+					 border: 1px solid #adb8c0;
+				}
+				&:checked:after {
+					content: ' ';
+					width: 7px;
+				    height: 7px;
+					border-radius: 50%;
+					background: #000;
+					position: absolute;
+					top: 3px;
+					left: 3px;
 				}
 			}
 		}
+		select {
+			width: 295px;
+			height: 30px;
+			color: #fff;
+			outline: none;
+			border: {
+				radius: 5px;
+				width: 1px;
+				style: solid;
+				color: #ccc;
+			}
+			&:focus {
+				border: {
+					radius: 5px;
+					width: 1px;
+					style: solid;
+					color: #ff5a09;
+				}
+			}
+			background: transparent;
+			option {
+				text-align: center;
+				color: #000;
+				background: none;
+			}
+		}
+		div > input {
+			width: 295px;
+  			height: 30px;
+  			@include gainFocus;
+		}
 	}
-
+	.self_introduce {
+		position: absolute;
+		right: 0;
+		width: 40%;
+		@include Font;
+		h3 {
+			width: 100px;
+			height: 26px;
+			line-height: 26px;
+			margin-bottom: 30px;
+			font-size: 24px;
+			color: #fff;
+		}
+		textarea {
+			width: 330px;
+			height: 220px;
+			margin-bottom: 32px;
+			padding: 5px;
+			// @include Font;
+			@include gainFocus;
+			// overflow: hidden;
+			box-sizing: border-box;
+			
+			outline: none;
+			background: transparent;
+		}
+		input {
+			width: 100px;
+			height: 40px; 
+			padding: 0;
+			margin-left: 230px;
+			@include Font;
+			@include gainFocus;
+			background: #EF9760; 
+			&:hover {
+				background: #ff5a09;
+			}
+		}
+	}
 }
 
+
+
+
+
+
+
+
+/*******************
+*底栏我们
+************************/
 div.hxq_footer {
 	width: 100%;
 	overflow: auto;
 	zoom: 1;
-	margin-top: 3.333333rem;
+	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -241,19 +456,16 @@ div.hxq_footer {
 			content: "--------------------------------------";
 		}
 		&:nth-child(n+2) {
-			width: 25.0rem;
+			width: 300px;
 		}
 		&:nth-child(2) {
 			display: inline-block;
 		}
 		img {
-			width: 8.333333rem;
-			height: 8.333333rem;
+			width: 100px;
+			height: 100px;
 			display: none;
 			border-radius: 0;
-			position: absolute;
-			top: 54.5rem;
-   	 		left: 63rem;
 		}
 		a {
 			font-size: 14px;
@@ -266,22 +478,22 @@ div.hxq_footer {
 .hxq_footer > a {
 		transition: all 0.4s ease-in-out;
 		display: inline-block;
-		margin: 2rem 1rem;
-    	padding-right: 1rem;
+		margin: 24px 12px;
+    	padding-right: 12px;
 		&:hover {
 			transform: rotate(360deg);
 			transform: scale(1.2,1.2);
 			// transform-origin: 100% 50%
 		}
 		 img {
-			width: 3.333333rem;
-			height: 3.333333rem;
+			width: 40px;
+			height: 40px;
 			background: #909292;
-			border-radius: 2.333333rem;
+			border-radius: 28px;
 			&:hover {
 				background:#cfcfcf;
 				filter:alpha(opacity=50);
-				// border-radius: 2.333333rem;
+				// border-radius: 28px;
 			}
 		}
 	}
