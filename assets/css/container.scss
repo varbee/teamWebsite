@@ -173,7 +173,7 @@ div.bl-panel-items > div > div {
 .bl-content p {
 	margin: 0 auto;
 	padding-bottom: 15px;
-	font-size: 1.7em;
+	font-size: 20px;
 	line-height: 1.8;
 }
 
@@ -204,6 +204,26 @@ div.bl-panel-items > div > div {
 .bl-content > ul li a img {
 	display: block;
 	max-width: 100%;
+}
+/*简介模块*/
+.introduce {
+	float: right;
+	margin-right: 6%;
+	width: 580px;
+}
+.team {
+	width: 540px;
+	margin-left: 6%;
+}
+
+@media (max-width: 1300px) {
+	.introduce,
+	.team {
+		width: 72%;
+		margin-right: 14%;
+		margin-left: 14%;
+		margin-bottom: 4%;
+	}
 }
 
 /*部门介绍模块*/
