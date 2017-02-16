@@ -147,7 +147,6 @@ $(function () {
     	var oDiv = $('#detail');
     	var timer = null;
     	oDiv.html(oDiv.html()+oDiv.html());
-    	
     	function move() {
     		var x = oDiv.position().top;
     		if (x <= -oDiv.height()/2) {
@@ -166,14 +165,12 @@ $(function () {
     		timer = setInterval(move,30);
     	})
     }();
-    
-    var click = function scroll() {
-    	$('#introduce').click(function() {
-    		var oCon =
-    		document.getElementById("container").scrollIntoView();
-    	
-    	})
-    }();
+
+    $('.light h2,.flare').click(function () {
+    	$('#black').fadeOut();
+    })
+
+
 
 });
 

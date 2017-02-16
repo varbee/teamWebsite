@@ -2,15 +2,13 @@
 	width:10rem;
 }
 body{
-	height:2600px;
+	height:3040px;
 	
 }
 //背景毛玻璃效果
 body:before{
 	content:".";
     height:100%;
-    width:1500px;
-	min-width:1500px;
 	background:  url(../images/banner3.jpg);
 	position: absolute;   
     left: 0;  
