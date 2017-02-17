@@ -1,3 +1,78 @@
+
 .department{
 	
+.bl-content h2 {
+	text-align: center;
+	padding-top: 20px;
+	font-size: 36px;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+}
+
+.branch {
+	margin-left: 18%;
+	margin-right: 18%;
+}
+
+
+.branch li {
+	display: inline-block;
+	width: 24%;
+	margin: 2% 3% 2% 4%;
+	position: relative;
+	perspective: 1000px;
+}
+
+.branch img {
+		display: block;
+		height: 214px;
+		width: 224px;
+		max-width: 100%;
+		opacity:1;
+		transform: translateY(0) rotateX(0);
+    	transition: all 0.4s ease-in-out 0s;
+	}
+.branch div {
+		position: absolute;
+		top:0;
+	    left:0;
+	    height: 81%;
+		width: 80%;
+		padding: 10%;
+	    opacity:0;
+		background-color: rgba(0,0,0,0.1);
+		line-height: 20px;
+		transition: all 0.40s ease-in-out 0s;
+	}
+.branch h3 {
+		text-align: center;
+	    font-size: 22px;
+	font-weight: 700;
+	    margin-top: -4px;
+    	padding-bottom: 10px;
+    	border-bottom: 1px solid #f2ede3;
+    	margin-bottom: 8px;
+	}
+.branch p {
+	margin: 0 auto;
+	padding-bottom: 15px;
+	font-size: 20px;
+	line-height: 1.8;
+	font-size: 15px; 
+}
+
+.branch li:hover div {
+	opacity:1;
+}
+.branch li:hover img {
+	transform: translateY(-100%) rotateX(90deg);
+    transform-origin: center bottom 0;
+    opacity:0;
+}
+@media (max-width: 1000px) {
+	.branch li {
+		width: 40%;
+		margin-right: 4%;
+	}
+}
 }

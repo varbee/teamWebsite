@@ -50,27 +50,10 @@ body {
    padding: 0;
 }
 
-table {
-   border-spacing: 0; 
-   border-collapse: collapse;
-}
 
 fieldset,
 img {
    border: none;
-}
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-   font-weight: normal; 
-   font-style: normal;
 }
 
 ol,
@@ -78,10 +61,6 @@ ul {
    list-style: none;
 }
 
-caption,
-th {
-   text-align: left;
-}
 
 h1,
 h2,
@@ -91,25 +70,6 @@ h5,
 h6 {
    font-size: 100%;
    font-weight: normal;
-}
-
-q:before,
-q:after {
-   content: "";
-}
-
-abbr,
-acronym {
-   font-variant: normal; 
-   border: none;
-}
-
-sup {
-   vertical-align: text-top;
-}
-
-sub {
-   vertical-align: text-bottom;
 }
 
 input,
@@ -123,32 +83,6 @@ select {
 
 textarea {
    resize: none;
-}
-
-input,
-button,
-textarea,
-select {
-   *font-size: 100%;
-}
-
-button {
-   cursor: pointer;
-   border: none; 
-   outline: none;
-}
-
-legend {
-   color: #000000;
-}
-
-del,
-ins {
-   text-decoration: none;
-}
-
-small {
-   font-size: 100%;
 }
 
 a {
@@ -192,7 +126,7 @@ menu {
    display: block;
 }
 
-audio,
+
 canvas,
 video {
    display: inline-block;
