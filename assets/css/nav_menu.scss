@@ -1,3 +1,17 @@
-.nav_menu{
-	
+.nav{
+	.nav-menu{
+		margin-left: 40px;
+		img{
+			vertical-align: middle;
+		}
+		span{
+			display:inline-block;
+			font-size:20px;
+			margin-top: 14px;
+			margin-left: 10px;
+			text-align: center;
+			color:#fff;
+
+		}
+	}
 }
