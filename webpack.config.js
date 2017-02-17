@@ -34,6 +34,7 @@ module.exports = {
             {
                 test: /\.scss$/, 
                 loader: 'style!css!sass?sourceMap'
+
             },
             { 
                 test: /\.js$/,
@@ -58,6 +59,7 @@ module.exports = {
     postcss: function() {
     return [px2rem({remUnit: 75})];
     },
+   
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',

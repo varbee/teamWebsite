@@ -22,6 +22,7 @@
     "node-sass": "^3.4.2",
     "postcss-loader": "^1.3.0",
     "postcss-px2rem": "^0.3.0",
+    "px2rem-webpack-plugin": "^0.2.0-3",
     "sass-loader": "^3.1.1",
     "scss-loader": "0.0.1",
     "style-loader": "^0.13.1",
