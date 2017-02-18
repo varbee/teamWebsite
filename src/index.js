@@ -14,6 +14,6 @@ import '../components/department.js';
 // 团队部门模块
 import '../components/join-us.js';
 // 加入我们模块
-import '../components/footer.js';
-//底栏模块
+import '../components/product.js';
+//产品模块
 
